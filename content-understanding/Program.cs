@@ -14,8 +14,8 @@ namespace AnalyzerClient
             // --- Configuration ---
             string analyzerId = "GovClearanceAnalyzer";
             string apiVersion = "2025-05-01-preview";
-            string endpoint = "https://ai-admin-8795.cognitiveservices.azure.com/";
-            string key = "AdVlF0JkQmpp3l3m9TJqvUPoKPWLk5ALBSzhgkfBzSd2ZqQCrUP9JQQJ99BKACL93NaXJ3w3AAAAACOGZDn0"; // <-- Replace with your real key
+            string endpoint = "AZURE_CONTENT_UNDERSTANDING_ENDPOINT";
+            string key = "AZURE_CONTENT_UNDERSTANDING_SUBSCRIPTION_KEY"; // <-- Replace with your real key
 
             // API endpoint URL
             string requestUrl = $"{endpoint}contentunderstanding/analyzers/{analyzerId}:analyze?api-version={apiVersion}";
@@ -23,7 +23,7 @@ namespace AnalyzerClient
             // JSON payload
             string jsonPayload = @"
             {
-                ""url"": ""https://demoadlsstorageai102.blob.core.windows.net/docs/clearances/Secret_Clearance_Interview_Transcript_George_Hart.pdf?sp=r&st=2025-11-24T06:16:30Z&se=2025-11-26T14:31:30Z&spr=https&sv=2024-11-04&sr=b&sig=IPGmp3FXlJavf%2BbtIin2iecxffIfGQQ0JJ7gCbVRWtU%3D""
+                ""url"": ""https://raw.githubusercontent.com/Azure/azure-sdk-for-python/main/sdk/formrecognizer/azure-ai-formrecognizer/tests/sample_forms/receipt/contoso-receipt.pdf""
             }";
 
              using var httpClient = new HttpClient();
@@ -220,4 +220,5 @@ namespace AnalyzerClient
             }
         }
     }
+
 }
