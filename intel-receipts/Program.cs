@@ -22,8 +22,8 @@ class Program
             return;
         }
 
-        string endpoint = "https://ai-demoaihub479858965481.cognitiveservices.azure.com/";
-        string apiKey = "8JborcueYDhtOXZh8boXSY02x34KHjPtGmLP1xYcLWpIgFV1uCTkJQQJ99BKAC1i4TkXJ3w3AAAAACOGDWlK"; // Replace with your actual API Key
+        string endpoint = "AI_FOUNDRY_AI_SERVICE_ENDPOINT";
+        string apiKey = "AI_FOUNDRY_API_KEY"; // Replace with your actual API Key
 
         AzureKeyCredential credential = new AzureKeyCredential(apiKey);
         DocumentIntelligenceClient client = new DocumentIntelligenceClient(new Uri(endpoint), credential);
@@ -195,6 +195,7 @@ static void PrintReceiptTable2(List<List<string>> tableRows)
 
     Console.WriteLine("\n\n");
 }
+
 
 
 }
